@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashen Trial</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="stage" aria-label="Ashen Trial game">
+        <canvas id="game" width="960" height="540"></canvas>
+        <div id="mainMenu" class="main-menu">
+          <div class="menu-panel">
+            <span>Ashen Trial</span>
+            <h2>Open the Ashen Vale</h2>
+            <p>Explore the chapel grounds, harvest echoes, shape your build, then pass the grave gate and challenge the Warden.</p>
+            <div class="menu-actions">
+              <button id="newGameBtn" type="button">New Pilgrimage</button>
+              <button id="skipIntroBtn" type="button">Skip Prologue</button>
+            </div>
+          </div>
+        </div>
+        <div id="cutscene" class="cutscene">
+          <div class="cutscene-visual" aria-hidden="true">
+            <div class="moon"></div>
+            <div class="bell"></div>
+            <div class="ember ember-a"></div>
+            <div class="ember ember-b"></div>
+            <div class="ember ember-c"></div>
+          </div>
+          <div class="cutscene-frame">
+            <span id="cutsceneKicker">Prologue</span>
+            <h2 id="cutsceneTitle">The Bell Beneath Ash</h2>
+            <div id="cutsceneSpeaker" class="speaker"></div>
+            <p id="cutsceneText"></p>
+            <button id="cutsceneNext" type="button">Continue</button>
+          </div>
+        </div>
+        <div class="hud">
+          <div class="meter">
+            <span>Vigor</span>
+            <div class="bar"><i id="healthBar"></i></div>
+          </div>
+          <div class="meter stamina">
+            <span>Stamina</span>
+            <div class="bar"><i id="staminaBar"></i></div>
+          </div>
+          <div class="boss-meter">
+            <span id="bossName">Grave Warden</span>
+            <div class="bar"><i id="bossBar"></i></div>
+          </div>
+        </div>
+        <div id="message" class="message">
+          <strong>Ashen Trial</strong>
+          <span>WASD move, mouse aim, click attack, Space dodge, F bonfire, R restart</span>
+        </div>
+      </section>
+      <aside class="panel">
+        <h1>Ashen Trial</h1>
+        <section class="lore">
+          <h2 id="storyTitle">The Bell Beneath Ash</h2>
+          <p id="storyText">
+            You are the last cinder-knight sent below the ruined chapel. The bell has not rung for forty winters, and the dead now answer in its place.
+          </p>
+        </section>
+        <div class="stats">
+          <p><span>Oath</span><b id="oath">Silence the bell</b></p>
+          <p><span>Level</span><b id="level">1</b></p>
+          <p><span>Points</span><b id="points">0</b></p>
+          <p><span>Weapon</span><b id="weapon">Longsword</b></p>
+          <p><span>Flasks</span><b id="flasks">3</b></p>
+          <p><span>Echoes</span><b id="echoes">0</b></p>
+          <p><span>Phase</span><b id="phase">I</b></p>
+          <p><span>Minions</span><b id="minions">0</b></p>
+          <p><span>Status</span><b id="status">Ready</b></p>
+        </div>
+        <section class="build-panel">
+          <h2>Build</h2>
+          <div class="build-row">
+            <button data-stat="vigor" type="button">Vigor</button>
+            <button data-stat="endurance" type="button">Endurance</button>
+            <button data-stat="strength" type="button">Strength</button>
+            <button data-stat="dexterity" type="button">Dexterity</button>
+          </div>
+          <div class="weapon-row">
+            <button data-weapon="longsword" type="button">Sword</button>
+            <button data-weapon="greatblade" type="button">Greatblade</button>
+            <button data-weapon="daggers" type="button">Daggers</button>
+          </div>
+        </section>
+        <div class="controls">
+          <p><kbd>WASD</kbd> Move</p>
+          <p><kbd>Mouse</kbd> Aim</p>
+          <p><kbd>Click</kbd> Attack</p>
+          <p><kbd>Right</kbd> Parry</p>
+          <p><kbd>C</kbd> Parry</p>
+          <p><kbd>E</kbd> Heavy attack</p>
+          <p><kbd>Space</kbd> Dodge roll</p>
+          <p><kbd>Q</kbd> Flask</p>
+          <p><kbd>F</kbd> Rest bonfire</p>
+          <p><kbd>F</kbd> Enter gate</p>
+          <p><kbd>L</kbd> Lock on</p>
+          <p><kbd>P</kbd> Pause</p>
+          <p><kbd>R</kbd> Restart</p>
+        </div>
+      </aside>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
