@@ -181,8 +181,6 @@ Developer
 
 Teknik Informatika
 
-Universitas Gunadarma
-
 ---
 
 ## 📄 License
