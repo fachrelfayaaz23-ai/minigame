@@ -14,7 +14,7 @@ services:
     image: louislam/uptime-kuma:1
     container_name: monitoring_uas_fachrel
     ports:
-      - "3005:3005" 
+      - "3005:3001" 
     volumes:
       - uptime-kuma-data:/app/data
     restart: always
